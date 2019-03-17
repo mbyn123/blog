@@ -1,101 +1,171 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>个人简历</title>  
-    <style>
-        .clearfix::after{content: '';
-    display:block; 
-    clear:  both ;}
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="//at.alicdn.com/t/font_1091687_jb7lu8o588l.js"></script>
+  
+  <style type="text/css">
+    .icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+body{background-color:rgb(239, 239, 239);}
 
-   body{background:black;color: white}
+    *{padding:0;margin:0;}
 
-   nav{padding-top: 8px;padding-bottom: 8px;}
+     .clearfix::after{
+         content:'';
+         display:block;
+         clear:both;}
 
-   .topnav nav ul li{float:right;list-style: none;
-                   font-size:12px;color:#b7b7b7;
-                   display:block;margin-left: 17px;
-                   margin-right: 17px; }
+  nav{margin:28px 35px 0 0;}  
 
+ .two li {float:right;
+         list-style:none;
+        padding-left:1px;padding-right:1px;  
+         font-size:12px;
+         }
 
-
-   .topnav nav ul li a:hover{border-bottom-color:rgb(224,101,103)}
-
-   .topnav nav ul li a{border-bottom:3px solid transparent;padding-bottom:5px;padding-top: 5px;}
+ .two li a{border-bottom:
+          3px transparent solid;
+          padding-bottom:5px;
+          color:#b7b7b7;}        
    
-   
-   .logo{float:left;text-decoration: none;margin:15px;}
- 
-   .rs{font-family:Arial Black;font-weight:bold;color:#e6686a;font-size:24px;}
+.two li a:hover{border-bottom-color:rgb(224,101,103);}
 
-   .one {font-family:Arial Black;font-weight:bold;color:rgb(192,192,192);font-size:24px;}
+.logo{float:left;
+    font-size:24px;
+    font-family: Arial Black;
+    text-decoration:none;
+    margin:10px;} 
 
-   .button{color:white;}
-   .media a{color:white;}
-    </style> 
+.rs{color:#e6686a;}
+
+.one{color:#9a9da2;}
+
+.banner{background-image:url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+        width:100% ;
+        height:515px;
+        background-position: center center;}
+
+
+.topnav{position:fixed;
+       top:0;
+       left:0;
+       width:100%;}
+.topnav a{margin:20px 0 0 19px}       
+
+.mask{background-color: rgba(0,0,0,0.8);
+      height:515px;}
+
+.card{
+      max-width:930px;
+      margin:0 auto;
+      background-color:white   }
+.picyure{float: left;margin:60px 65px 50px 50px;}  
+.welcome{background-color:rgb(232,103,107);
+         color:white;
+         display:inline-block;height:30px;width: 70px;
+         text-align: center;
+         position: relative;
+         line-height: 30px;
+         margin-top:50px;
+         margin-bottom:25px;}
+.triangle{border:10px solid red;
+     width:1px;height:0px;
+     border-top-color:rgb(232,103,107);
+     border-left-color:rgb(232,103,107);
+     border-right-color:transparent;
+      border-bottom-color:transparent;
+      position: absolute;top:30px;left:5px;top:20px
+     }
+     hr{margin-top:30px;color:rgb(157,160,167)}
+.i{font-size:16px;;font-family:微软雅黑}
+#l{color:rgb(157,160,167)}
+#i{color:black}
+.xingxi{margin-top:30px}
+.media svg{width:30px;height:30px;fill:white;vertical-align:top;}
+.media{text-align:center;background:rgb(230,104,106);}
+.media svg{display:inline-block;margin:15px;border-radius:50%;width:30px;height:30px;padding: 7px}
+.media svg:hover{background:rgb(208,92,96)}
+.media{width:930px;margin:0 auto}
+.button{color:black;}
+hr{color:rgb(157,160,167) }
+</style>
 </head>
-
 <body>
-    <div class="topnav clearfix">
+<div class="topnav ">
     <a class="logo" href="#" alt="logo" >
-        <span class="rs">RS</span>
-        <span class="one">card</span>
+        <span class="rs">RS</span> <span class="one">card</span>
     </a>
     <nav>
-        <ul>  
-            <li ><a herf="#">关于</li>
-            <li ><a herf="#">技能</li>
-            <li ><a herf="#">作品</li>
-            <li ><a herf="#">博客</li>
-            <li ><a herf="#">日历</li>
+        <ul class="two"> 
+            <li ><a herf="#">其他</li>
             <li ><a herf="#">联系方式</li>
-            <li ><a herf="#">其他</li>            
+            <li ><a herf="#">日历</li>
+            <li ><a herf="#">博客</li> 
+            <li ><a herf="#">作品</li>
+            <li ><a herf="#">技能</li>
+            <li ><a herf="#">关于</li>            
         </ul>
     </nav>
     </div>
 
-<div class="banner" style="backgrond-image: url(#)"></div>
+<div class="banner" >
+    <div class="mask"></div>
+</div>
 <main>
 <div class="card ">
-    <div class="pictureANDtext">
-    <div class="picyure"><img src="" alt="头像"></div>
-    <div class="text"> 
-        <div class="porfile">
-        <span class="welcome">hello</span>
+    <div class="picturetext clearfix">
+    <div class="picyure"><img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-1-299x347.jpg" alt="头像"></div>
+    <div class="text clearfix">   
+        <span class="welcome">Hello
+        <span class="triangle"></span></span>
+        
         <h1>李世琪</h1>
         <p>前端开发工程师</p>
         <hr>
-        <dl>
-            <dt>年龄</dt>
-               <dd>24岁</dd>
-            <dt>所在城市</dt>
-                <dd>武汉</dd>
-            <dt>邮箱</dt>
-                <dd>1832376466@QQ.com</dd>
-            <dt>手机</dt>
-                <dd>15527065691</dd>
-        </dl>
-    </div>
-    </div>
-    </div>
-    <footer class="media">
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-        <a href="#"><img src="#" alt="..."></a>
-    </footer>   
-</div>
+      <div class="xingxi">
+ 
+<pre>
+<div><sapn class="i"><b>年龄</b></span>                        <span id="l">24岁</span></div>
+<div><sapn class="i"><b>所在城市</b></span>               <span id="l">  武汉</span></div>
+<div><sapn class="i"><b>邮箱</b></span>                       <span id="l">1832376466@QQ.com</span</div>
 
-<a class="button" href="#">下载简历</a>
+<div><sapn id="i"><b>手机</b></span>                      <span id="l"> 15527065691</span</div>
+</pre>
+      </div>
+        </div>
+    </div>
+    </div>
+        
+    <footer class="media">
+      
+     <a  href="#"><svg class="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg" aria-hidden="true">
+    <use xlink:href="#icon-github"></use>
+</svg></a>
+      
+     <a href="#"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-weibo"></use>
+</svg></a>
+      
+     <a  href="#"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-weixing1"></use>
+</svg></a>
+ </footer>     
+</div>
+</main>  
+<div>
+<a class="button" href="#">下载PDF简历</a>
 <p>
     李世琪 ，前端工程师<br>
     技能：前端开发，Rails 开发，Node.js 开发
 </p>
-  </main>  
+</div>
+   
       <section>
           <h2>技能</h2>
           <ol>
@@ -118,8 +188,8 @@
         </nav>
      <div class="jobs"></div>
          <div class="big"></div>
-         <div ="small"></div>
-         <div ="small"></div>
+         <div class="small"></div>
+         <div class="small"></div>
      </div>
      </section>
 </body>
