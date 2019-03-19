@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="//at.alicdn.com/t/font_1091687_jb7lu8o588l.js"></script>
+  
+  <style type="text/css">
+.icon {
+       width: 1em; height: 1em;
+       vertical-align: -0.15em;
+       fill: currentColor;
+       overflow: hidden;
+    }
+
+body{
+    background:rgb(239, 239, 239);
+    }
+
+ *{padding:0;margin:0;}
+
+.clearfix::after{
+                 content:'';
+                 display:block;
+                clear:both;
+                }
+
+nav{
+    margin:28px 35px 0 0;
+    }  
+
+ .navigation li {
+         float:right;
+         list-style:none;
+         padding-left:1px;padding-right:1px;  
+         font-size:12px;
+         }
+
+ .navigation li a{
+          border-bottom:
+          3px transparent solid;
+          padding-bottom:5px;
+          color:#b7b7b7;
+          }        
+   
+.navigation li a:hover{
+                border-bottom-color:rgb(224,101,103);
+                }
+
+.logo{
+      float:left;
+      font-size:24px;
+      font-family: Arial Black;
+      text-decoration:none;
+      margin:10px;
+    } 
+
+.rs{color:#e6686a;}
+
+.headline{color:#9a9da2;}
+
+.banner{background-image:url(https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2016/02/rs-cover-2-2-1-1.jpg);
+        width:100% ;
+        height:515px;
+        background-position: center center;}
+
+
+.topnav{position:fixed;
+       top:0;
+       left:0;
+       width:100%;}
+
+.topnav a{
+         margin:20px 0 0 19px;
+    }       
+
+.mask{
+      background-color: rgba(0,0,0,0.8);
+      height:515px;
+      }
+
+.card{
+      max-width:930px;
+      margin:0 auto;
+      background-color:white ;
+      box-shadow: 5px 53px 116px -25px rgba(0,0,0,0.75);
+      }
+.picyure{
+         float: left;
+         margin:50px 65px 50px 50px;
+      }  
+.welcome{
+         background-color:rgb(232,103,107);
+         color:white;
+         display:inline-block;height:30px;width: 70px;
+         text-align: center;
+         position: relative;
+         line-height: 30px;
+         margin-top:50px;
+         margin-bottom:25px;}
+
+.triangle{border:10px solid red;
+          width:1px;height:0px;
+          border-top-color:rgb(232,103,107);
+          border-left-color:rgb(232,103,107);
+          border-right-color:transparent;
+          border-bottom-color:transparent;
+          position: absolute;top:30px;left:5px;top:20px;
+     }
+hr{
+    margin:30px 0;
+    color:rgb(157,160,167)
+    }
+
+.data{font-size:16px;
+  font-family:微软雅黑;
+  }
+
+#wuhan,
+#mailbox,
+#age,
+#Mobile{
+    color:rgb(157,160,167)
+    }
+
+#phone{
+    color:black;
+    }
+
+.media svg{
+           width:30px;
+           height:30px;
+           fill:white;
+           vertical-align:top;
+    }
+.media{
+      text-align:center;
+      background:rgb(230,104,106);
+    }
+
+.media svg{
+          display:inline-block;
+          margin:15px;
+          border-radius:50%;
+          width:30px;
+          height:30px;
+          padding: 7px
+          }
+
+.media svg:hover{
+                 background:rgb(208,92,96);
+    }
+.media{
+       width:930px;margin:0 auto;
+       }
+
+.button{
+        color:black;
+        text-decoration:none;
+        border:1px solid rgb(203, 205, 207);
+        font-size: 16px;
+        padding:21px 55px;
+        display:inline-block;
+        margin:37px 0 0 0}
+.button:hover{box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+              transition:box-shadow 0.2s;
+              }
+.download{
+         text-align:center;
+         }
+.self-introduction{
+                   max-width:930px;
+                   margin:30px 800px;
+                   font-family: 楷体;
+                   font-size:20px;
+    }
+main{ 
+    margin-top:-336px;
+    }
+
+.skill{
+       max-width:930px;
+       margin-left: auto;
+       margin-right:auto;       
+       }
+ol,
+ul{ 
+   list-style: none;
+   }
+ 
+.skill h2{
+          color: #3d4451;
+          font-size: 34px;
+          line-height: 1.2;
+          font-weight: 600;
+          text-align: center;         
+    }
+
+.skill ol{
+           background-color:white;
+           box-shadow: 0px 2px 31px -6px rgba(0,0,0,0.75);
+           padding-top:43px;
+           padding-left:51px;
+}
+.schedule{
+          width:400px;
+          background-color:rgb(250,225,225);
+          height:5px;
+          border-radius:2px;
+          margin-top: 4px;
+          margin-bottom: 42px;
+          }
+
+.progress{
+         width:80%;
+         height:100%;
+         background-color:rgb(230,104,106);
+         border-radius:2px;
+         }
+
+.skill ol li{
+             float:left;
+             width:48%;
+                      
+    } 
+
+.skill ol li:nth-child(even){ 
+   margin-left:10px;
+}
+
+.skill ol{
+          margin-top:33px;
+} 
+.skill ol h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    font-weight:normal;
+    
+    }
+
+.sample{
+       max-width: 930px;
+       margin-left: auto;
+       margin-right:auto;
+       text-align: center;
+}
+.sample h2{text-align:center;
+           margin-bottom:5PX;
+           margin-top:80PX;
+}
+.sample nav ol li{float:left;
+             margin-left:50px;
+             cursor:pointer;     
+                   }
+.sample nav ol li:nth-child(1){margin-left: 0px}
+
+.sample nav{
+            text-align: center;
+            display: inline-block;
+            vertical-align: top;   
+               }
+
+.sample nav ol{
+              display:inline-block;
+              vertical-align: top;
+}
+          
+
+nav .bar{
+        height:5px;
+        background:white;
+        border-radius:2px; 
+     }
+nav .bar-inner{
+               height:100%;
+               background:rgb(230,104,106);
+               border-radius:2px;
+               transition:all 0.5s;
+          }
+nav .bar.state-1 .bar-inner{
+                            margin-left:0;
+                            width:35px;      
+          }
+nav .bar.state-2 .bar-inner{
+                            margin-left:76px;
+                            width:50px;
+          }
+nav .bar.state-3 .bar-inner{
+                            margin-left:160px;
+                             width:89px;
+          }
+.jobs{
+      position: relative;    
+      height:574px;    
+          }
+.big{position:absolute;
+     left:0;
+     top:0;
+     margin-top:30px;
+     margin-bottom: 100px;
+   
+}
+.small{
+       position:absolute;
+       top:0;
+       left:634px;
+    
+}
+.small2{
+        position: absolute;
+        top:300px;
+        left:634px;
+       
+}        
+</style>
+</head>
+<body>
+<div class="topnav ">
+    <a class="logo" href="#" alt="logo" >
+        <span class="rs">RS</span> <span class="headline">card</span>
+    </a>
+    <nav>
+        <ul class="navigation"> 
+            <li ><a herf="#">其他</li>
+            <li ><a herf="#">联系方式</li>
+            <li ><a herf="#">日历</li>
+            <li ><a herf="#">博客</li> 
+            <li ><a herf="#">作品</li>
+            <li ><a herf="#">技能</li>
+            <li ><a herf="#">关于</li>            
+        </ul>
+    </nav>
+    </div>
+
+<div class="banner" >
+    <div class="mask"></div>
+</div>
+<main>
+<div class="card ">
+    <div class="picturetext clearfix">
+    <div class="picyure"><img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/11/startuper-1-299x347.jpg" alt="头像"></div>
+    <div class="text clearfix">   
+        <span class="welcome">Hello
+        <span class="triangle"></span></span>
+        
+        <h1>李世琪</h1>
+        <p>前端开发工程师</p>
+        <hr>
+      <div class="personal details">
+ 
+<pre>
+<div><sapn class="data"><b>年龄</b></span>                        <span id="age">24岁</span></div>
+<div><sapn class="data"><b>所在城市</b></span>               <span id="wuhan">  武汉</span></div>
+<div><sapn class="data"><b>邮箱</b></span>                       <span id="mailbox">1832376466@QQ.com</span</div>
+
+<div><sapn id="phone"><b>手机</b></span>                      <span id="Mobile"> 15527065691</span</div>
+</pre>
+      </div>
+        </div>
+    </div>
+    </div>
+        
+    <footer class="media">
+      
+     <a  href="#"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-github"></use>
+</svg></a>
+      
+     <a href="#"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-weibo"></use>
+</svg></a>
+      
+     <a  href="#"><svg class="icon" aria-hidden="true">
+    <use xlink:href="#icon-weixing1"></use>
+</svg></a>
+ </footer>     
+</div>
+</main>  
+<div class="production">
+    <p class="download">
+<a class="button" href="#"><b>下载PDF简历</b></a>
+    </p>
+<p class="self-introduction">
+    李世琪 ，前端工程师<br>
+   前端开发，Node.js 开发
+</p>
+</div>
+   
+      <section class="skill">
+          <h2>技能</h2>
+          <ol class="Skills table clearfix">
+                <li>
+                    <h3>HTML 5 &AMP; CSS</h3>
+                    <div class="schedule">
+                    <div class="progress"></div>
+                    </div>
+                </li>
+                <li>
+                        <h3>JAVASCRIPT</h3>
+                        <div class="schedule">
+                        <div class="progress" style="width:30%"></div>
+                        </div>
+                </li>
+                <li>
+                        <h3>JOurey</h3>
+                        <div class="schedule">
+                        <div class="progress" style="width:60%"></div>
+                        </div>
+                </li>
+                <li>
+                        <h3>vue</h3>
+                        <div class="schedule">
+                        <div class="progress" style="width:70%"></div>
+                        </div>
+                </li>
+                <li>
+                        <h3>react</h3>
+                        <div class="schedule">
+                        <div class="progress" style="width:85%"></div>
+                        </div>
+                </li>
+                <li>
+                         <h3>HTTP</h3>
+                        <div class="schedule">
+                        <div class="progress" style="width:88%"></div>
+                         </div>
+                </li>          
+          </ol>
+      </section>
+      <section class="sample">
+     <h2>作品集</h2>
+     <nav>
+         <ol class="clearfix">
+             <li id="portfolio1">所有</li>
+             <li id="portfolio2">框架</li>
+             <li id="portfolio3">原生js &amp;css</li>
+         </ol>
+         <div id="portfolioBar" class="bar state-2">
+             <div  class="bar-inner"></div>
+         </div>
+        </nav>
+      <script> 
+      portfolio1.onclick= function(){
+        portfolioBar.className = 'bar state-1'
+      }
+      portfolio2.onclick= function(){
+        portfolioBar.className = 'bar state-2'
+      }
+      portfolio3.onclick= function(){
+        portfolioBar.className = 'bar state-3'
+      }
+      </script>
+     <div class="jobs">
+         <div class="big">
+             <img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/12/photo-1422480041422-130238c67fe2-1-2-2-1-1-607x576.jpg" 
+             alt="job1"
+         </div>
+         <div class="small">
+            <img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/12/kaboompics-1-2-1-1-294x278.jpg" 
+            alt="job2">
+         </div>
+         <div class="small2">
+         <img src="https://rscard.px-lab.com/startuper/wp-content/uploads/sites/2/2015/12/photo-1421757295538-9c80958e75b0-2-2-1-1-294x278.jpg"
+          alt="job3">
+         </div>
+        </div>
+     </section>
+</body>
+</html>
