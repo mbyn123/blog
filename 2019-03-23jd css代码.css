@@ -1,0 +1,341 @@
+.mian{height:275px;    
+}
+.mianlist{width:1190px;
+ background:white;  
+ margin:0 auto; 
+ }
+.count-down{width:190px;
+   height:275px;
+   border:1px solid red;
+   background: #e83632;
+   position: relative;
+   float: left;
+    }
+  
+.count-down .hanzi{font-size:34px;
+          color:#fff;
+          position: absolute; 
+          top:42px; 
+          width:100%;
+          text-align: center;                            
+          }           
+.english{font-size: 20px;
+color:rgba(255, 255, 255, 0.5);
+position: absolute;
+top:90px;
+width: 100%;
+text-align: center;
+    }
+.hanzi1{font-size:16px;
+color:#fff;
+position: absolute; 
+top:170px; 
+width:100%;
+text-align: center;}
+.count-down img{position: absolute;
+       top:126px;
+       left:86px;
+       width:20px;
+       height:33px;
+       }
+.count-down .time{height:40px;
+         position: absolute;
+         top:212px;
+         left:30px; 
+         text-align: center;                
+         } 
+         
+.count-down .second,                 
+.count-down .minute,
+.count-down .hour{width:40px;
+height:40px;
+background: #2f3430;
+float:left;
+position: relative;
+margin-right:5px;
+position: relative;
+}      
+
+.count-down span{font-size:20px;
+         color:#fff;
+         line-height:40px;
+         font-weight: bold;
+         }
+
+.count-down .center{
+ display:block;
+ position: absolute;
+ top:50%;
+ left:0;  
+ width:100%;
+ height:1px;
+ background:#e83632; 
+   }      
+   
+.seckill-center{
+         height:275px;
+         float:left;
+         }           
+
+    
+.seckill1{width:200px;
+  height:275px;
+  float:left;  
+  position: relative;
+  background:white;      
+}
+.seckill1 a{width:190px;
+    height:275px;
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    }        
+.seckill1 img{
+     position: absolute;
+     top:40px;
+     left:50%;
+     width:120px;
+     height:140px;
+     margin-left:-70px;
+     }        
+.seckill1 p{font-size:12px;
+   color:#666;
+   position: absolute;
+   top:185px;
+   left:0;
+   width:160px;
+   padding: 0 15px;
+  
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow:hidden;       
+    } 
+.seckill1 p:hover{color:#e6382f;}            
+.seckill1 .price{border:1px solid #e6382f;
+         position: absolute;
+         top:230px; 
+         left:15px; 
+         width:160px;
+         height:20px; 
+         background: #e6382f; 
+         line-height: 20px;
+            }  
+.price i{margin-right: 3px;
+ font-style: normal;
+font-weight: 400;
+font-size: 12px; 
+}
+.seckill1 .left{float:left;
+        width: 80px;
+        height: 20px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+       } 
+.seckill1 .right{float:left;
+         width: 80px;
+         height: 20px;
+         background: #fff;
+         text-align: center;
+         color: #b7bcb8;
+         font-size: 12px;
+         text-decoration: line-through;
+         }             
+
+.seckill2{width:200px;
+  height:275px;
+  float:left; 
+  background:white;
+  border-left:1px solid #f0f3ef;
+  border-right:1px solid #f0f3ef;
+  position: relative;
+    }
+.seckill2 a{width:190px;
+    height:275px;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+
+      }
+.seckill2 img{position: absolute;
+      top:63px;
+      left:24px;
+      }             
+.seckill2 p{
+   color:#666;
+   font-size: 12px;
+   position: absolute;
+   top:185px;
+   left:0;
+   padding:0 15px;
+   width:160px;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   overflow:hidden; 
+  
+}     
+
+.seckill2 .price{width:160px;
+         height:20px;
+         line-height: 20px;
+         position: absolute;
+         top:230px;
+         left:15px;
+         border:1px solid #e6382f;
+         } 
+.seckill2 .left{width:80px;
+        height:20px;
+        background: #e6382f;
+        float: left;
+        font-size: 14px;
+        color:#fff;
+        font-weight: bold;
+        text-align: center;
+          }                  
+
+.seckill2 .right{width:80px;
+         height:20px;
+         background: #fff;
+         float: left;
+         font-size: 12px;
+         color:#b7bcb8;
+         font-weight: 400;
+         text-decoration:line-through;
+         text-align: center;
+       }  
+.seckill2 .price i{margin-right: 3px;            
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px; 
+         }
+.seckill2 p:hover{color:#e6382f;}                                                                              
+.seckill3{
+  width:200px;
+  height:275px;
+  float:left; 
+  position: relative;
+  }
+.seckill3 a{width:190px;
+    height:275px;
+    display:block;
+    margin:0 auto;
+    text-align: center;
+    border-right:1px solid #f0f3ef;
+    }  
+.seckill3 img{position: absolute;
+      top:39px;
+      left:29px;
+        }   
+.seckill3 p{width:160px;
+    position: absolute;
+    top:185px;
+    left:0px; 
+    font-size:12px;
+    color:#666;
+    padding:0 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden; 
+    }  
+.seckill3 p:hover{color:#e6382f;} 
+.seckill3 .price{width:160px;
+         height:20px;
+         position: absolute;
+         top:230px;
+         left:15px;
+         border:1px solid #e6382f; 
+        
+         }    
+
+.seckill3 .left{
+        width:80px;
+        height:20px;
+        background: #e6382f;
+        font-size: 14px;
+        color:white;
+        font-weight: bold;
+        float:left;
+           }  
+
+.seckill3 .right{
+         width:80px;
+         height:20px;
+         background: #fff;
+         float: left;
+         font-size: 12px;
+         color:#b7bcb8;
+         font-weight: 400;
+         text-decoration:line-through;
+         text-align: center;
+          } 
+
+.seckill2 .price i{
+          margin-right: 3px;            
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px; 
+           }                
+
+.seckill4 {width:200px;
+  height:275px;
+  float: left;
+  position: relative;
+  border-right:1px solid #f0f3ef;
+   }
+.seckill4 a{width:190px;
+    height:275px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    } 
+.seckill4 img{position: absolute;
+      top:36px;
+      left:34px;
+      }                      
+.seckill4 p{ width:160px;
+     position: absolute;
+     top:185px;
+     left:0px;
+     font-size: 12px;
+     color:#666;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     overflow:hidden; 
+     padding:0 15px;
+     }  
+.seckill4 p:hover{color:red;} 
+.seckill4 .price{width:160px;
+        height:20px;
+        position: absolute;
+        top:230px;
+        left:15px; 
+        border:1px solid #e6382f;
+        }   
+.seckill4 .left{width:80px;
+        height:20px;
+        background: #e6382f;
+        float:left;
+        text-align: center;
+        font-size: 14px;
+        color:#fff;
+         }  
+.seckill4 .right{width:80px;
+         height:20px;
+         background: #fff;
+         float:left;
+         text-align: center;
+         font-size: 12px;
+         color:#b7bcb8;
+         text-decoration:line-through; 
+      
+       }                                 
+.seckill-right {position:relative; 
+        width:200px;
+        height:275px;
+        }       
+        
+.seckill-right img{position:absolute;
+           top:10px;
+           left:1003px; 
+            }            
