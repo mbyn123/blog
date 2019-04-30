@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的导航</title>
+
+<link rel="stylesheet" href="./style.css">  
+
+</head>
+<body>
+       
+            <header></header>	
+            <main id="keying">
+            
+            </main>
+            <footer></footer>
+            <script>    
+                var keys={
+                '0':{0:'q',1:'w',2:'e',3:'r',4:'t',5:'y',6:'u',7:'i',8:'o',9:'p',length:'10'},
+                '1':{0:'a',1:'s',2:'d',3:'f',4:'g',5:'h',6:'j',7:'k',8:'l',length:'9'},
+                '2':{0:'z',1:'x',2:'c',3:'v',4:'b',5:'n',6:'m',length:'7'},
+                'length':3  
+            }
+            var hash={'q':'qq.com','w':'weibo.com','e':'ele.com','r':'renren.com','t':'taobao.com','y':'youtube.com',
+                      'b':'bilibili.com','a':'www.agmj.tv/','j':'jd.com','x':'xiaomi.com','m':'baidu.com'
+            }
+          // 取出变更后的hash localstorage中的zzz对应的hash
+            var hashInlocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
+            if(hashInlocalStorage){
+               hash=hashInlocalStorage
+            }
+          //遍历keys 生成div标签
+          for(index = 0;index<keys['length'];index++){
+            divx=document.createElement('div')
+            divx.className='row'
+            keying.appendChild(divx)
+            row=keys[index]
+            //遍历keys数组里面3个数组的值,生成kbd标签
+            for(index2=0;index2<row['length'];index2++){
+            kbdx=document.createElement('kbd')
+            kbdx.textContent=row[index2]
+            kbdx.className='key'
+            button=document.createElement("button")//设置一个编辑按钮
+            button.textContent="E"//设置按钮内的文档内容
+            button.id=row[index2]//设置按钮的id标签
+            img=document.createElement('img')
+            if(hash[row[index2]]){
+              img.src='http://'+hash[row[index2]]+'/favicon.ico'
+            }else{
+              img.src='http://pqrk745j5.bkt.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png'
+            }
+            img.onerror=function(xxx){
+              xxx.target.src='http://pqrk745j5.bkt.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png'
+            }
+            button.onclick=function(keycode){//给按钮绑定鼠标点击事件
+            button2=keycode['target']
+            img2=button2.previousSibling//获取同级标签排序上一个标签（哥哥）（img标签）的值
+            key=button2['id']//获取点击按钮时按钮的值
+            x=prompt("给我一个网址")//设置一个可以更改网址的弹窗
+            hash[key]=x//将更改后的网址的值与我们设置的网址联系起来
+            //变更hash
+            img2.src='http://'+x+'/favicon.ico'
+            img2.onerror=function(xxx){
+              xxx.target.src='http://pqrk745j5.bkt.clouddn.com/%E6%97%A0%E6%A0%87%E9%A2%98.png'
+            }
+            localStorage.setItem('zzz',JSON.stringify(hash))//将变更后的网址存在浏览器缓存中
+            console.log(hash)
+           }
+            kbdx.appendChild(img)
+            kbdx.appendChild(button)
+            divx.appendChild(kbdx)
+            } 
+          }
+          document.onkeypress=function(keycode){//使用键盘事件中keycode属性获取键盘触发键的值
+          key=keycode['key']
+          website=hash[key]//将键盘事件触发键的值与网址绑定
+       // location.href = website//使用bom对象中的location对象,在当前窗口打开网页
+         window.open('https:/'+website)//使用bom对象中的window对象在新的窗口打开网页
+          }
+
+            </script>
+</body>
+</html> 
