@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-	<meta charset="UTF-8">
-	<title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimun-scale=1.0">
+	<title>我的画板</title>
 	<style>
 #xxx{background:green}
 
@@ -21,7 +22,7 @@ body{
 #actions.x> #brush{
   display:inline-block
 }
-#actions.x> #eraser{
+#actions.x> #eraser{ 
   display:none
 }
 		</style>
@@ -37,13 +38,13 @@ body{
 var yyy=document.getElementById('xxx');
 var yyy=document.getElementById('xxx');
 //设置画板大小在显示的屏幕中自适应
-  var pagewidth=window.innerWidth//获取当前屏幕的显示宽度
-  var pageheight=window.innerHeight//获取当前屏幕的显示高度
+  var pagewidth=document.documentElement.clientWidth//获取当前屏幕的显示宽度
+  var pageheight=document.documentElement.clientHeight//获取当前屏幕的显示高度
 	yyy.width=pagewidth//将画板的宽度与获取的屏幕宽度绑定
 	yyy.height=pageheight//将画板的高度与获取的屏幕宽度绑定
 window.onresize=function(){//将此作用作用到全局
-  var pagewidth=window.innerWidth
-  var pageheight=window.innerHeight
+  var pagewidth=document.documentElement.clientWidth
+  var pageheight=document.documentElement.clientHeight
 	yyy.width=pagewidth
 	yyy.height=pageheight
 }
@@ -57,11 +58,11 @@ yyy.onmousedown=function(a){
 	var y=a.clientY
     if(eraserEnabled){
       using=true
-      context.clearRect(x,y,30,30)
+      context.clearRect(x,y,30,30)//清除
     }else{
        using=true
-       lastPoint={x:x-5,y:y}//获取线的起点位置
-	 //  drawCircle(x,y,1)
+       lastPoint={x:x,y:y}//获取线的起点位置
+	   drawCircle(x,y,0)
     }
 }
 //鼠标移动
@@ -70,13 +71,13 @@ yyy.onmousemove=function(a){
 	var y=a.clientY
   if(eraserEnabled){
     if(using){
-      context.clearRect(x-5,y,30,30)
+      context.clearRect(x,y,30,30)
     }
     
   }else{
      if(using){
        var newPoint={x:x,y:y}//获取线的结束位置
-	  //  drawCircle(x,y,1)
+	    drawCircle(x,y,0)
        drawline(lastPoint.x,lastPoint.y,newPoint.x,newPoint.y)//表示绘画路径 线的中起点和终点的值
        lastPoint=newPoint//将新的的起点和终点联系起来，画线
      }
@@ -114,6 +115,15 @@ var eraserEnabled=false
   eraserEnabled=false
   actions.className="actions"//改变标签名
   }
+
+canvas.ontouchstart=function(){
+  console.log('12')
+}
+  
+canvas.ontouchmove=function(){
+  console.log('12')
+}  
+
 
 
 </script>
