@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{background:pink;}
+    .time{width:1000px;
+          height:250px;
+          position: fixed;
+          left:25%;
+          top:35%;
+          background:rgb(234,234,234);
+          }
+    </style>
+    <script>
+        window.onload=function(){
+        //时间补位    
+        function todou(n){//设置函数toduo将时间数字转换成两位数
+            if(n<10){
+                return "0"+n;
+            }else{
+                return ""+n;
+            }
+        }  
+        var img=document.getElementsByTagName("img")
+        function tick(){//将tick设置为函数
+        var date=new Date();//获取当前实时时间
+        var str=todou(date.getHours())+todou(date.getMinutes())+todou(date.getSeconds());//连接时间字符串
+        for(var i=0;i<img.length;i++){
+            img[i].src="imge/"+str.charAt(i)+".png"//将当前时间与图片路径相等
+        }       //避免兼容性问题，使用字符串中的charAt代替[]
+        }
+         setInterval(tick,1000);//设置定时语句，将语句中的执行代码设置为变量tick
+         tick();
+        };
+    </script>
+</head>
+<body>
+    <div class="time">
+    <img src="imge/0.png">
+    <img src="imge/0.png">
+  
+    <img src="imge/0.png">
+    <img src="imge/0.png">
+    
+    <img src="imge/0.png">
+    <img src="imge/0.png">
+    </div>
+    
+</body>
+</html>
