@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+*{margin:0px;
+  padding:0px;
+ }
+
+.clearfix::after{
+         content:'';
+         display:block;
+         clear:both;}
+ 
+#div1{width:690px;
+     height:185px;
+     margin: 100px auto;
+     position: relative;
+     overflow: hidden;
+}
+ul{position: absolute;
+    left:0;
+    top:0;
+  }
+ul li{list-style:none;
+      float:left;
+      width:172px;
+      height:185px;
+     }
+</style>
+<script>
+    window.onload=function(){
+    var div=document.getElementById("div1")
+    var ul=div.getElementsByTagName("ul")[0];
+    var li=ul.getElementsByTagName("li")
+    var speed=2//设置sped为ul移动的距离变量
+    ul.innerHTML=ul.innerHTML+ul.innerHTML//设置ul的内容等于自身的两倍
+    ul.style.width=li[0].offsetWidth*li.length+"px"//设置ul的宽度等于它内容li的数量乘以li的宽度
+    function move(){//将变量move设置为函数
+        if(ul.offsetLeft<-ul.offsetWidth/2){//当ul滚动的左边距离到达它自身宽度一半的时候
+            ul.style.left="0"//将ul的左边距设为0，让它重新回到初始位置
+        }
+        if(ul.offsetLeft>0){
+            ul.style.left=-ul.offsetWidth/2+"px"
+        }
+     ul.style.left=ul.offsetLeft+speed+"px"//获取ul的左边距，每隔0.3s减距离变量（speed）px,使ul向左滚动
+    }
+    //设置定时器
+    var timer=setInterval(move,30)//调用函数move
+    //鼠标移入，清除定时器
+    div.onmousemove=function(){
+        clearInterval(timer)
+    }
+    //鼠标离开，打开定时器
+    div.onmouseout=function(){
+    timer=setInterval(move,30)
+    }
+   document.getElementsByTagName("a")[0].onclick=function(){
+    
+        speed=-2
+    }
+   document.getElementsByTagName("a")[1].onclick=function(){
+        speed=2
+    }
+    }
+</script>
+<body>
+    <a href="#">向左</a>
+    <a href="#">向右</a>
+    <div id="div1" >
+    <ul class="clearfix">
+    <li><img src="imge/1.jpg" alt=""></li>
+    <li><img src="imge/2.jpg" alt=""></li>
+    <li><img src="imge/3.jpg" alt=""></li>
+    <li><img src="imge/4.jpg" alt=""></li>
+    </ul>
+    </div>
+</body>
+</html>
