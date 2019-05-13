@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+    var id=tab.tBodies[0].rows.length+1//单元格Id排序等于排序数量+1
+    btn.onclick=function(){
+    var name=document.getElementById("name")
+      var tr=document.createElement("tr")//创建行
+      
+      var td=document.createElement("td")//创建第一列单元格ID
+      td.innerHTML=id++;//在单元格Id删除后，新建的单元格再加+1
+      tr.appendChild(td)//将此单元格放进行
+
+      var td=document.createElement("td")//创建第二列单元格姓名
+      td.innerHTML=name.value//单元格内容等于姓名文本框里的内容
+      tr.appendChild(td)//将此单元格放进行
+ 
+      var td=document.createElement("td")//创建第三列单元格年龄
+      td.innerHTML=age.value//单元格内容等于年龄文本框里的内容
+      tr.appendChild(td)//将此单元格放进行
+
+      var td=document.createElement("td")
+      td.innerHTML='<a href="#">删除</a>'
+      tr.appendChild(td)//将此单元格放进行
+
+      td.getElementsByTagName("a")[0].onclick=function(){
+        tab.tBodies[0].removeChild(this.parentNode.parentNode)//删除
+      }
+
+      tab.tBodies[0].appendChild(tr)//将整个行放入tbody表格主体内
+    }
+    
+    btn1.onclick=function(){
+    var name=document.getElementById("name")   
+    var tab=document.getElementById("tab") 
+    for(var i=0;i<tab.tBodies[0].rows.length;i++){//遍历行rows
+      var stab=tab.tBodies[0].rows[i].cells[1].innerHTML.toLocaleLowerCase();//当行rows里面的单元格姓名
+      var text=name.value.toLocaleLowerCase();//与文本框里输入的值相等时
+      var arr=text.split(" ")//关键词搜索 使用split分割成字符串数组
+      tab.tBodies[0].rows[i].style.background="" //如果不相等行的背景颜色无效果
+      for(var n=0;n<arr.length;n++){//遍历字符串数组
+        if(stab.search(arr[n])!=-1){//模糊搜索 使用seach查找字符串的位置 将遍历后数组arr的值放入
+        tab.tBodies[0].rows[i].style.background="green"//将行的背景颜色变为绿色
+      }
+      }
+     }
+     }
+    }
+    </script>
+</head>
+<body>
+    姓名：<input type="text" id="name">
+    年龄：<input type="text" id="age">
+    <input type="button" value="添加" id="btn">
+    <input type="button" value="搜索" id="btn1">
+    <table border="1px" width="500px" id="tab">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>blue</td>
+                <td>22</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张三</td>
+                <td>21</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>李四</td>
+                <td>26</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>王五</td>
+                <td>33</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>赵六</td>
+                <td>36</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>田七</td>
+                <td>40</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

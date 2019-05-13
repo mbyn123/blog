@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+    var tab=document.getElementById("tab")
+    var btn=document.getElementById("btn")
+    btn.onclick=function(){
+     var arr=[]
+     for(var i=0;i<tab.tBodies[0].rows.length;i++){//遍历行tr
+        arr[i]=tab.tBodies[0].rows[i]//行tr里面的值等于数组arr的值
+     }   
+     arr.sort(function(tr1,tr2){//数组排序
+       var n1=parseInt(tr1.cells[2].innerHTML)//以行tr的第一个单元格ID内容序号来比较排序
+       var n2=parseInt(tr2.cells[2].innerHTML)//以行tr的第一个单元格ID内容序号来比较排序
+        return n1-n2
+    })
+    for(var i=0;i<arr.length;i++){//遍历数组
+      tab.tBodies[0].appendChild(arr[i])//将排序后的行tr重新放入表格
+    }
+    }
+     }
+    </script>
+</head>
+<body>
+    <input type="button" value="排序" id="btn">
+    <table border="1px" width="500px" id="tab">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>赵六</td>
+                <td>36</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张三</td>
+                <td>21</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>李四</td>
+                <td>26</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>田七</td>
+                <td>40</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>blue</td>
+                <td>22</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>李五</td>
+                <td>33</td>
+                <td></td>
+            </tr>
+           
+            
+        </tbody>
+    </table>
+</body>
+</html>

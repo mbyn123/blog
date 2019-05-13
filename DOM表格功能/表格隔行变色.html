@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    window.onload=function(){
+       for(var i=0;i<tab.tBodies[0].rows.length;i++){//遍历行tr
+            tab.tBodies[0].rows[i].onmouseover=function(){
+                color=this.style.background;//设置tr的背景颜色的原本颜色
+                this.style.background="green"
+            }
+            tab.tBodies[0].rows[i].onmouseout=function(){
+                this.style.background=color//鼠标移开后恢复原来的背景颜色
+            }
+         if(i%2){
+            tab.tBodies[0].rows[i].style.background="red"
+         }else{
+            tab.tBodies[0].rows[i].style.background=""
+         }
+       }
+    }
+    </script>
+</head>
+<body>
+    <table border="1px" width="500px" id="tab">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>blue</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>张三</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>李四</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>王五</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>赵六</td>
+                <td>36</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>田七</td>
+                <td>40</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
